@@ -700,10 +700,14 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
-        -- gopls = {},
+        clangd = {},
+        gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
+        pylsp = {},
+        rust_analyzer = {},
+        ts_ls = {},
+        cmake = {},
+
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -920,7 +924,7 @@ require('lazy').setup({
         functionStyle = {},
         keywordStyle = { italic = true },
         statementStyle = { bold = true },
-        typeStyle = { bold = true },
+        typeStyle = {},
         transparent = true, -- do not set background color
         dimInactive = false, -- dim inactive window `:h hl-NormalNC`
         terminalColors = true, -- define vim.g.terminal_color_{0,17}
